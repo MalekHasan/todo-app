@@ -2,12 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import App from "./app.jsx";
-
+import { BrowserRouter } from "react-router-dom";
 class Main extends React.Component {
   render() {
     return (
       <>
+      <BrowserRouter>
         <App />
+      </BrowserRouter>
+
       </>
     );
   }
