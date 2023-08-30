@@ -4,7 +4,10 @@ export const SettingContext = createContext({});
 
 export default function Setting(props) {
   const [list, setList] = useState([]);
-  const [counterPage, setCounterPage] = useState(1);
+  const [activePage, setPage] = useState(1);
+  // const [list, setList] = useState([]);
+  const [pageNum, setPageNum] = useState(3);
+  const [isComplet, setIsComplet] = useState(false);
   function toggleComplete(id) {
     const items = list.map((item) => {
       if (item.id == id) {
@@ -12,13 +15,13 @@ export default function Setting(props) {
       }
       return item;
     });
-    let myCounter = counterPage;
-    setCounterPage(myCounter++);
+    let myCounter = activePage;
+    setPage(myCounter++);
     setList(items);
   }
 
   return (
-    <SettingContext.Provider value={{ list,counterPage, setList, toggleComplete }}>
+    <SettingContext.Provider value={{ list,setList, activePage, toggleComplete,setPage,pageNum, setPageNum,isComplet, setIsComplet }}>
       {props.children}
     </SettingContext.Provider>
   );

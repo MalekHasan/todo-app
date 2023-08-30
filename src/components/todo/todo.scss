@@ -9,6 +9,65 @@ header{
         color: white;
     }
 }
+.grid-margin{
+    margin: 0;
+}
+.card-close-flex{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.divname{
+    color: white;
+    padding:6px 12px;
+    margin-right: 12px;
+    border-radius: 10px;
+}
+
+.sucess{
+    background-color: crimson;
+
+}
+.dangerous{
+    background-color: #40c057;
+
+}
+
+.card-form {
+    width: 320px;
+    height: 100%;
+    // padding: 100px 48px;
+    margin-bottom: 20px;
+    // margin-left: 60px;
+}
+.card-form h2{
+padding: 20px;
+margin-left: auto;
+margin-right: auto;
+// margin-bottom: 20px;
+}
+.card-form label{
+padding-left: 20px;
+margin-left: auto;
+margin-right: auto;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+}
+
+.card-form label button{
+margin-bottom: 20px;
+
+}
+.card-form input, .input{
+    margin-bottom: 10px;
+    width: calc(100% - 20%);
+}
+.card-item{
+    margin-bottom: 20px;
+    
+}
 // .myGrid{
 //  display: flex;
 // }
