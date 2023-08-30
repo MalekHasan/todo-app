@@ -92,15 +92,16 @@ const ToDo = () => {
           {list.slice(activePage * pageNum - pageNum, activePage * pageNum).map((item, idx) => (
             <List item={item} toggleComplete={toggleComplete} key={idx} />
           ))}
-        </Grid.Col>
-      </Grid>
-      </Container>
-
-      <Pagination
+                <Pagination
         value={activePage}
         onChange={setPage}
         total={Math.ceil(list.length / pageNum) || activePage}
       />
+        </Grid.Col>
+      </Grid>
+      </Container>
+
+
     </>
   );
 };

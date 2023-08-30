@@ -8,6 +8,8 @@ export default function Setting(props) {
   // const [list, setList] = useState([]);
   const [pageNum, setPageNum] = useState(3);
   const [isComplet, setIsComplet] = useState(false);
+  const [checked, setChecked] = useState(false);
+
   function toggleComplete(id) {
     const items = list.map((item) => {
       if (item.id == id) {
@@ -21,7 +23,7 @@ export default function Setting(props) {
   }
 
   return (
-    <SettingContext.Provider value={{ list,setList, activePage, toggleComplete,setPage,pageNum, setPageNum,isComplet, setIsComplet }}>
+    <SettingContext.Provider value={{ list,setList, activePage, toggleComplete,setPage,pageNum, setPageNum,isComplet, setIsComplet,checked, setChecked }}>
       {props.children}
     </SettingContext.Provider>
   );
