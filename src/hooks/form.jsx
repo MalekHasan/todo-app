@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react';
+import  './form.scss';
+
+
 
 const useForm = (callback, defaultValues={}) => {
 
@@ -6,6 +9,8 @@ const useForm = (callback, defaultValues={}) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log(values);
+
     callback(values);
   };
 
