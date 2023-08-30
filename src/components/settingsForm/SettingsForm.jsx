@@ -9,6 +9,7 @@ import {
 import React, { useContext } from "react";
 import "./SettingsForm.scss";
 import { SettingContext } from "../../context/SettingContext";
+import { IconSettings } from "@tabler/icons-react";
 export default function SettingsForm() {
   const { checked, setChecked,setPageNum,pageNum } = useContext(SettingContext);
 
@@ -19,8 +20,11 @@ export default function SettingsForm() {
   return (
     <>
       <Container size="lg" px="xs">
-        <header>
-          <h1>To Do List: items pending</h1>
+        <header >
+          <div className="setting-header">
+            <IconSettings size="2rem" color="white"/>
+            <h1>Manage Settings</h1>
+          </div>
         </header>
         <Grid
           gutter={5}
