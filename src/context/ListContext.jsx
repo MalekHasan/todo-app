@@ -1,10 +1,18 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 export const ListsContext = createContext({});
 import { v4 as uuid } from "uuid";
 
 export default function Lists(props) {
   const [list, setList] = useState([]);
-
+  useEffect(()=>{
+    if(localStorage.getItem("todos"))
+    {
+      let myList=[];
+      myList.push(JSON.parse(localStorage.getItem("todos")))
+      console.log(myList);
+      setList(myList)
+    }
+  },[])
   function toggleComplete(id) {
     const items = list.map((item) => {
       if (item.id == id) {
@@ -26,6 +34,7 @@ export default function Lists(props) {
     const items = list.filter((item) => item.id !== id);
     setList(items);
   }
+
 
   return (
     <ListsContext.Provider value={{ list,setList, toggleComplete,addItem,deleteItem}}>

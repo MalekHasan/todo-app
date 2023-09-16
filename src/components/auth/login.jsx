@@ -69,7 +69,7 @@ function Login() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    loginSetting.login(user.username, user.password).then((result)=>'');
+    loginSetting.login(user.username, user.password);
   }
 
   return (
@@ -90,7 +90,7 @@ function Login() {
             name="password"
             onChange={handleChange}
           />
-          <Button color="red.6" type="submit">Login</Button>
+          <Button color={loginSetting.loggedIn?"red.6":"dark.4"} type="submit">Login</Button>
         </form>
       </When>
     </>

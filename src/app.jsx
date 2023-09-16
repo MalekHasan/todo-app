@@ -11,6 +11,12 @@ import LoginContext from "./components/auth/context";
 import Auth from "./components/auth/auth";
 
 export default function App() {
+        // const async response = await superagent
+        // .post(`https://localhost:4000/signin`)
+        // .set(
+        //   "authorization",
+        //   `Basic ${base64.encode(`User:user`)}`
+        // );
   return (
     <>
       <LoginContext>
