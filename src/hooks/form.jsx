@@ -10,6 +10,7 @@ const useForm = (callback, defaultValues={}) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(values);
+    localStorage.setItem("todos",JSON.stringify(values))
 
     callback(values);
   };
