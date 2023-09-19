@@ -1,5 +1,11 @@
 # React + Vite
-
+```javascript
+//Mock Users
+username : Admin    password: admin
+username : User     password: user
+username : Writer   password: writer 
+username : Editor   password:editor
+```
 [Github-Repo](https://github.com/MalekHasan/todo-app)
 
 [PR](https://github.com/MalekHasan/todo-app/pull/3)
